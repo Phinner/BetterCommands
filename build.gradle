@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'distribution'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+}
+
+version 'Alphav1'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://www.jitpack.io' }
+}
+
+application {
+    mainClassName = 'TestPlugin'
+}
+
+ext {
+    versions = [
+            javacord  : '3.1.2',
+            mindustry : 'v123'
+    ]
+}
+
+dependencies {
+    implementation "org.javacord:javacord:${versions.javacord}"
+    implementation "com.github.Anuken.Mindustry:core:${versions.mindustry}"
+}
