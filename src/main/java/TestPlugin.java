@@ -1,4 +1,3 @@
-
 import arc.struct.ObjectSet;
 import arc.util.CommandHandler;
 import arc.util.Log;
@@ -16,7 +15,7 @@ public class TestPlugin extends Plugin {
 
     public void registerClientCommands(CommandHandler handler) {
 
-        handler.<Player>register("info", "[UUID|IP]", "Get all the player information.", (args, admin) -> {
+        handler.<Player>register("info-all", "[UUID|IP]", "Get all the player information.", (args, admin) -> {
 
             if (admin.admin) {
 
@@ -42,7 +41,7 @@ public class TestPlugin extends Plugin {
         });
 
 
-        handler.<Player>register("ban", "[IP]", "Ban all the IPs a player has.", (args, admin) -> {
+        handler.<Player>register("ban-ip", "[IP]", "Ban all the IPs a player has.", (args, admin) -> {
 
             if (admin.admin) {
 
@@ -93,7 +92,7 @@ public class TestPlugin extends Plugin {
             }
         });
 
-        handler.<Player>register("unban", "[IP]", "Unban all the IPs a player has.", (args, admin) -> {
+        handler.<Player>register("unban-ip", "[IP]", "Unban all the IPs a player has.", (args, admin) -> {
 
             if (admin.admin) {
 
